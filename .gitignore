@@ -1,0 +1,9 @@
+# list all files and folder which you do not wish to push up to Github
+
+.vscode
+
+.DS_Store 
+
+# (sometimes Mac generates one of this)
+
+designs
