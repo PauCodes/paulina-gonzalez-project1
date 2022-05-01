@@ -11,22 +11,31 @@ img {
     display: block;
 }
 
+html {
+    color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: $raleway;
+    line-height: 24px;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+
+p {
+    margin: 0;
+}
+
 // html {
 //     font-family: 'Barlow', sans-serif;
 //     font-size: 125%;
 //     color: var(--white);
-// }
-
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//     font-family: 'offside', regular;
-// }
-
-// h2 {
-//     font-size: 2.625rem;
 // }
 
 // p {
@@ -49,4 +58,5 @@ section {
 
 a {
     text-decoration: none;
+    color: $black;
 }

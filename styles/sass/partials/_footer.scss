@@ -1,0 +1,100 @@
+footer {
+    background-color: $blackTwo;
+
+    .footerContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .footerOne,
+        .footerThree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h4,
+            h5 {
+                letter-spacing: 0.5px;
+                margin-top: 10px;
+            }
+
+            h4 {
+                color: $brightGreen;
+            }
+
+            h5 {
+                color: $white;
+            }
+
+            p {
+                font-family: $lora;
+                color: $white;
+                font-size: 13px;
+                // line-height es diferente que abajo
+                line-height: 25px;
+                letter-spacing: 0.3px;
+                text-align: center;
+            }
+
+            .desktopOnly {
+                display: none;
+            }
+
+            input {
+                border: none;
+                padding: 10px;
+                width: 200px;
+                margin-top: 15px;
+            }
+
+            input::placeholder {
+                background-color: $darkGrey;
+                color: $white;
+                font-family: $lora;
+                font-style: italic;
+            }
+
+            .social-icons {
+                border-top: 0.5px solid $brownGrey;
+                margin-top: 15px;
+                width: 200px;
+
+            }
+
+            .social-icons-list {
+                display: flex;
+                margin-top: 15px;
+                justify-content: center;
+            }
+
+            li a {
+                color: $white;
+                padding: 20px;
+            }
+        }
+
+        .footerTwo {
+            display: none;
+        }
+    }
+
+    .copyright {
+        background-color: $black;
+
+        p {
+            // REPETIDO
+            font-family: $lora;
+            color: $white;
+            font-size: 13px;
+            line-height: 44px;
+            letter-spacing: 0.3px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        span {
+            text-transform: uppercase;
+            color: $brightGreen;
+        }
+    }
+}

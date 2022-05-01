@@ -1,4 +1,25 @@
 header {
-    background-image: url("../../../assets/home-1.jpeg");
-    background-color: green;
+    background: url("../assets/home-1.jpeg") center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+
+    .navBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 20px;
+
+        h1 {
+            font-size: 30px;
+        }
+
+        .burgerMenu {
+            font-size: 30px;
+
+        }
+
+        .navigation {
+            display: none;
+        }
+    }
 }
