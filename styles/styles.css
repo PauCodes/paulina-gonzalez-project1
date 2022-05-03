@@ -293,6 +293,15 @@ html {
   color: #2E2E2E;
 }
 
+header {
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.blogHeader {
+  background: url("../assets/blog-1.jpeg") center no-repeat;
+}
+
 h1,
 h2,
 h3,
@@ -327,8 +336,6 @@ a {
 
 header {
   background: url("../assets/home-1.jpeg") center no-repeat;
-  background-size: cover;
-  min-height: 100vh;
 }
 header .navBar {
   display: -webkit-box;
@@ -343,13 +350,47 @@ header .navBar {
   padding-top: 20px;
 }
 header .navBar h1 {
-  font-size: 30px;
+  font-size: 46px;
 }
 header .navBar .burgerMenu {
   font-size: 30px;
 }
 header .navBar .navigation {
   display: none;
+}
+
+.homeHeader {
+  background: url("../assets/home-1.jpeg") center no-repeat;
+  background-size: cover;
+}
+
+main.homeMain .popularRecipes {
+  padding: 0;
+}
+main.homeMain .popularRecipes h2 {
+  text-align: center;
+  margin-top: 23px;
+}
+main.homeMain .popularRecipes p {
+  text-align: justify;
+  margin: 15px;
+}
+main.homeMain .popularRecipes .bottomPopularRecipes li {
+  position: relative;
+}
+main.homeMain .popularRecipes .bottomPopularRecipes li i {
+  position: absolute;
+  font-size: 25px;
+  left: 13px;
+}
+main.homeMain .popularRecipes .bottomPopularRecipes li h4 {
+  text-align: justify;
+  margin: 20px 0 0 50px;
+}
+
+.blogHeader {
+  background: url("../assets/blog-1.jpeg") center no-repeat;
+  background-size: cover;
 }
 
 footer {
@@ -389,6 +430,7 @@ footer .footerContainer .footerThree h5 {
 }
 footer .footerContainer .footerOne h4,
 footer .footerContainer .footerThree h4 {
+  font-size: 18px;
   color: #539908;
 }
 footer .footerContainer .footerOne h5,
@@ -498,7 +540,9 @@ footer .copyright span {
     gap: 20px;
   }
   header .navBar .navigation li a {
+    font-family: "Raleway", sans-serif;
     text-transform: uppercase;
+    font-weight: bold;
   }
 
   footer .footerContainer {

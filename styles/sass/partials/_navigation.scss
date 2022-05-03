@@ -1,7 +1,5 @@
 header {
     background: url("../assets/home-1.jpeg") center no-repeat;
-    background-size: cover;
-    min-height: 100vh;
 
     .navBar {
         display: flex;
@@ -10,7 +8,7 @@ header {
         padding-top: 20px;
 
         h1 {
-            font-size: 30px;
+            font-size: 46px;
         }
 
         .burgerMenu {

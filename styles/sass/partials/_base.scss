@@ -15,6 +15,17 @@ html {
     color: $black;
 }
 
+header {
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.blogHeader {
+    background: url("../assets/blog-1.jpeg") center no-repeat;
+}
+
+
+
 h1,
 h2,
 h3,
@@ -22,7 +33,7 @@ h4,
 h5,
 h6 {
     margin: 0;
-    font-family: $raleway;
+    font-family: $primary;
     line-height: 24px;
     letter-spacing: 1.1px;
     text-transform: uppercase;
@@ -32,17 +43,6 @@ p {
     margin: 0;
 }
 
-// html {
-//     font-family: 'Barlow', sans-serif;
-//     font-size: 125%;
-//     color: var(--white);
-// }
-
-// p {
-//     font-family: 'offside', regular;
-//     line-height: 30px;
-//     letter-spacing: 0.2px;
-// }
 
 
 ul {

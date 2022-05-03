@@ -9,8 +9,9 @@
             gap: 20px;
 
             li a {
+                font-family: $primary;
                 text-transform: uppercase;
-
+                font-weight: bold;
             }
         }
 
@@ -40,7 +41,7 @@
                 }
 
                 p {
-                    font-family: $lora;
+                    font-family: $secondary;
                     color: $white;
                     font-size: 13px;
                     // line-height es diferente que abajo

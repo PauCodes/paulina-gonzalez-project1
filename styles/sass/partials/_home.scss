@@ -1,0 +1,54 @@
+.homeHeader {
+    background: url("../assets/home-1.jpeg") center no-repeat;
+    background-size: cover;
+}
+
+main.homeMain {
+    .popularRecipes {
+        padding: 0;
+
+        h2 {
+            text-align: center;
+            margin-top: 23px;
+        }
+
+        p {
+            // font-family: $secondary;
+            text-align: justify;
+            margin: 15px;
+        }
+
+        .bottomPopularRecipes {
+            li {
+                position: relative;
+
+                i {
+                    position: absolute;
+                    font-size: 25px;
+                    left: 13px;
+                }
+
+                h4 {
+                    text-align: justify;
+                    margin: 20px 0 0 50px;
+                }
+            }
+
+        }
+    }
+}
+
+// li {
+//     position: relative;
+
+//     i {
+//         position: absolute;
+//         font-size: 25px;
+//         left: 13px;
+//     }
+
+//     h4 {
+//         text-align: justify;
+//         margin: 20px 0 0 40px;
+//     }
+// }

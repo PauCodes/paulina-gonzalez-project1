@@ -19,6 +19,7 @@ footer {
             }
 
             h4 {
+                font-size: 18px;
                 color: $brightGreen;
             }
 
@@ -27,7 +28,7 @@ footer {
             }
 
             p {
-                font-family: $lora;
+                font-family: $secondary;
                 color: $white;
                 font-size: 13px;
                 // line-height es diferente que abajo
@@ -50,7 +51,7 @@ footer {
             input::placeholder {
                 background-color: $darkGrey;
                 color: $white;
-                font-family: $lora;
+                font-family: $secondary;
                 font-style: italic;
             }
 
@@ -83,7 +84,7 @@ footer {
 
         p {
             // REPETIDO
-            font-family: $lora;
+            font-family: $secondary;
             color: $white;
             font-size: 13px;
             line-height: 44px;
