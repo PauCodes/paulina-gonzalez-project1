@@ -284,8 +284,12 @@ template {
   margin: 0 auto;
 }
 
+section {
+  margin-bottom: 50px;
+}
+
 img {
-  max-width: 100%;
+  width: 100%;
   display: block;
 }
 
@@ -359,35 +363,167 @@ header .navBar .navigation {
   display: none;
 }
 
+@media (min-width: 800px) {
+  header .navBar .burgerMenu {
+    display: none;
+  }
+  header .navBar .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+  }
+  header .navBar .navigation li a {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+  }
+}
 .homeHeader {
   background: url("../assets/home-1.jpeg") center no-repeat;
   background-size: cover;
 }
 
-main.homeMain .popularRecipes {
+main.homeMain .topContent,
+main.homeMain .bottomContent,
+main.homeMain .ourRestaurants,
+main.homeMain .hungryClients {
+  padding: 30px;
+}
+main.homeMain section {
   padding: 0;
 }
-main.homeMain .popularRecipes h2 {
+main.homeMain section h2 {
+  font-size: 25px;
   text-align: center;
-  margin-top: 23px;
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 40px;
 }
-main.homeMain .popularRecipes p {
-  text-align: justify;
-  margin: 15px;
+main.homeMain section h2::after {
+  content: "";
+  border: 2px solid #539908;
+  position: absolute;
+  width: 50px;
+  bottom: -20px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
-main.homeMain .popularRecipes .bottomPopularRecipes li {
+main.homeMain section p {
+  text-align: center;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+}
+main.homeMain section .bottomPopularRecipes {
+  background-color: #f2f2f2;
+}
+main.homeMain section .bottomPopularRecipes li {
+  padding: 20px 55px;
   position: relative;
 }
-main.homeMain .popularRecipes .bottomPopularRecipes li i {
+main.homeMain section .bottomPopularRecipes li i {
   position: absolute;
   font-size: 25px;
   left: 13px;
 }
-main.homeMain .popularRecipes .bottomPopularRecipes li h4 {
-  text-align: justify;
-  margin: 20px 0 0 50px;
+main.homeMain section .bottomPopularRecipes li h4 {
+  margin-bottom: 10px;
+}
+main.homeMain section .bottomPopularRecipes li p {
+  text-align: left;
+}
+main.homeMain .ourRestaurants .restaurantImageContainer,
+main.homeMain .hungryClients .restaurantImageContainer {
+  position: relative;
+}
+main.homeMain .ourRestaurants .restaurantImageContainer .fancyStamp,
+main.homeMain .hungryClients .restaurantImageContainer .fancyStamp {
+  position: absolute;
+  height: 60%;
+  bottom: 90px;
+  left: 215px;
+}
+main.homeMain .ourRestaurants p.quote,
+main.homeMain .hungryClients p.quote {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 36px;
+  letter-spacing: 0.6px;
+}
+main.homeMain .ourRestaurants p.quote i,
+main.homeMain .hungryClients p.quote i {
+  font-size: 25px;
+  color: white;
+}
+main.homeMain .gallery,
+main.homeMain .hungryClients {
+  margin-bottom: 0;
+}
+main.homeMain .hungryClients {
+  background-color: #DDED9A;
 }
 
+@media (min-width: 800px) {
+  main.homeMain .popularRecipes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main.homeMain .popularRecipes .topPopularRecipes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main.homeMain .popularRecipes .topContent,
+main.homeMain .popularRecipes .topImage {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  main.homeMain .popularRecipes .bottomPopularRecipes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main.homeMain .popularRecipes .bottomPopularRecipes .bottomContent {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  main.homeMain .popularRecipes .bottomPopularRecipes .bottomContent ul.menuList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main.homeMain .popularRecipes .bottomPopularRecipes .bottomContent ul.menuList li {
+    padding: 0;
+    margin: 60px 45px;
+    width: calc(50% - 110px);
+  }
+  main.homeMain .popularRecipes .bottomPopularRecipes .bottomContent ul.menuList li i {
+    left: -45px;
+  }
+  main.homeMain .popularRecipes .bottomPopularRecipes .bottomContent,
+main.homeMain .popularRecipes .bottomPopularRecipes .bottomImage {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  main.homeMain .imagesGallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 .blogHeader {
   background: url("../assets/blog-1.jpeg") center no-repeat;
   background-size: cover;
@@ -432,19 +568,11 @@ footer .footerContainer .footerOne h4,
 footer .footerContainer .footerThree h4 {
   font-size: 18px;
   color: #539908;
+  margin-top: 30px;
 }
 footer .footerContainer .footerOne h5,
 footer .footerContainer .footerThree h5 {
   color: #F6F6F6;
-}
-footer .footerContainer .footerOne p,
-footer .footerContainer .footerThree p {
-  font-family: "Lora", serif;
-  color: #F6F6F6;
-  font-size: 13px;
-  line-height: 25px;
-  letter-spacing: 0.3px;
-  text-align: center;
 }
 footer .footerContainer .footerOne .desktopOnly,
 footer .footerContainer .footerThree .desktopOnly {
@@ -512,16 +640,19 @@ footer .footerContainer .footerThree li a {
 footer .footerContainer .footerTwo {
   display: none;
 }
+footer p {
+  font-family: "Lora", serif;
+  color: #F6F6F6;
+  font-size: 13px;
+  line-height: 25px;
+  letter-spacing: 0.3px;
+  text-align: center;
+}
 footer .copyright {
   background-color: #2E2E2E;
 }
 footer .copyright p {
-  font-family: "Lora", serif;
-  color: #F6F6F6;
-  font-size: 13px;
   line-height: 44px;
-  letter-spacing: 0.3px;
-  text-align: center;
   margin-top: 20px;
 }
 footer .copyright span {
@@ -530,21 +661,6 @@ footer .copyright span {
 }
 
 @media (min-width: 800px) {
-  header .navBar .burgerMenu {
-    display: none;
-  }
-  header .navBar .navigation {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 20px;
-  }
-  header .navBar .navigation li a {
-    font-family: "Raleway", sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-
   footer .footerContainer {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;

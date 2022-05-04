@@ -4,22 +4,49 @@
 }
 
 main.homeMain {
-    .popularRecipes {
+
+    .topContent,
+    .bottomContent,
+    .ourRestaurants,
+    .hungryClients {
+        padding: 30px;
+    }
+
+    section {
         padding: 0;
 
         h2 {
+            font-size: 25px;
             text-align: center;
-            margin-top: 23px;
+            position: relative;
+            margin-top: 25px;
+            margin-bottom: 40px;
+
+
+            &::after {
+                content: "";
+                border: 2px solid $brightGreen;
+                position: absolute;
+                width: 50px;
+                bottom: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+
+            }
         }
 
         p {
-            // font-family: $secondary;
-            text-align: justify;
-            margin: 15px;
+            text-align: center;
+            // margin: 15px;
+            line-height: 24px;
+            letter-spacing: 0.3px;
         }
 
         .bottomPopularRecipes {
+            background-color: $lightGray;
+
             li {
+                padding: 20px 55px;
                 position: relative;
 
                 i {
@@ -29,26 +56,110 @@ main.homeMain {
                 }
 
                 h4 {
-                    text-align: justify;
-                    margin: 20px 0 0 50px;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    text-align: left;
                 }
             }
 
         }
     }
+
+    .ourRestaurants,
+    .hungryClients {
+
+        // NOT SURE ABOUT ALL THIS IMAGE PART
+        .restaurantImageContainer {
+            position: relative;
+
+            .fancyStamp {
+                position: absolute;
+                height: 60%;
+                bottom: 90px;
+                left: 215px;
+            }
+        }
+
+        p.quote {
+            font-size: 18px;
+            font-style: italic;
+            line-height: 36px;
+            letter-spacing: 0.6px;
+
+            i {
+                font-size: 25px;
+                color: white;
+            }
+        }
+
+    }
+
+    .gallery,
+    .hungryClients {
+        margin-bottom: 0;
+    }
+
+    .hungryClients {
+        background-color: $lightGreen;
+    }
 }
 
-// li {
-//     position: relative;
+// MEDIA QUERY
 
-//     i {
-//         position: absolute;
-//         font-size: 25px;
-//         left: 13px;
-//     }
+@media (min-width: 800px) {
+    main.homeMain {
+        .popularRecipes {
+            display: flex;
+            flex-wrap: wrap;
 
-//     h4 {
-//         text-align: justify;
-//         margin: 20px 0 0 40px;
-//     }
-// }
+            .topPopularRecipes {
+                display: flex;
+            }
+
+            .topContent,
+            .topImage {
+                flex-basis: 50%;
+            }
+
+            .bottomPopularRecipes {
+                display: flex;
+
+                .bottomContent {
+                    order: 2;
+
+                    ul.menuList {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+
+                        li {
+                            padding: 0;
+                            margin: 60px 45px;
+                            width: calc((100% / 2) - 110px);
+
+                            i {
+                                left: -45px;
+                            }
+                        }
+                    }
+                }
+
+                .bottomContent,
+                .bottomImage {
+                    flex-basis: 50%;
+                }
+            }
+        }
+
+        .imagesGallery {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    // p.quote {
+    //     text-align: center;
+    // }
+}

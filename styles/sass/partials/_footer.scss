@@ -21,20 +21,11 @@ footer {
             h4 {
                 font-size: 18px;
                 color: $brightGreen;
+                margin-top: 30px;
             }
 
             h5 {
                 color: $white;
-            }
-
-            p {
-                font-family: $secondary;
-                color: $white;
-                font-size: 13px;
-                // line-height es diferente que abajo
-                line-height: 25px;
-                letter-spacing: 0.3px;
-                text-align: center;
             }
 
             .desktopOnly {
@@ -79,23 +70,87 @@ footer {
         }
     }
 
+    p {
+        font-family: $secondary;
+        color: $white;
+        font-size: 13px;
+        line-height: 25px;
+        letter-spacing: 0.3px;
+        text-align: center;
+    }
+
     .copyright {
         background-color: $black;
 
         p {
-            // REPETIDO
-            font-family: $secondary;
-            color: $white;
-            font-size: 13px;
             line-height: 44px;
-            letter-spacing: 0.3px;
-            text-align: center;
             margin-top: 20px;
         }
 
         span {
             text-transform: uppercase;
             color: $brightGreen;
+        }
+    }
+}
+
+// MEDIA QUERY
+
+@media (min-width: 800px) {
+    footer {
+        .footerContainer {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+
+            .footerOne,
+            .footerTwo,
+            .footerThree {
+                align-items: flex-start;
+                display: flex;
+                flex-direction: column;
+
+                .desktopOnly {
+                    display: flex;
+                }
+
+                h5 {
+                    letter-spacing: 0.5px;
+                    margin-top: 10px;
+                    color: $white;
+                }
+
+                p {
+                    font-family: $secondary;
+                    color: $white;
+                    font-size: 13px;
+                    // line-height es diferente que abajo
+                    line-height: 44px;
+                    letter-spacing: 0.3px;
+                    // border-bottom: 0.5px solid $brownGrey;
+                    // margin-top: 15px;
+                    // width: 200px;
+                    // NO ME AGARRA!!!!!!!!!!!!!!
+                    text-align: left;
+                }
+
+
+                .social-icons-list {
+                    justify-content: flex-start;
+                }
+            }
+        }
+
+        .copyright {
+            max-width: 1080px;
+            width: 90%;
+            margin: 0 auto;
+
+            // THIS IS A P TBN. NECESITA CLASE?????????
+            .copyrightParagraph {
+                text-align: left;
+            }
+
         }
     }
 }

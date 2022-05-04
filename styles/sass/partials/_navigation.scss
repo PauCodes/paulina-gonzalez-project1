@@ -21,3 +21,28 @@ header {
         }
     }
 }
+
+
+// MEDIA QUERY
+@media (min-width: 800px) {
+
+    // HEADER
+    header {
+        .navBar .burgerMenu {
+            display: none;
+        }
+
+        .navBar .navigation {
+            display: flex;
+            gap: 20px;
+
+            li a {
+                font-family: $primary;
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+
+    }
+}
