@@ -7,7 +7,7 @@
 }
 
 section {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 img {
@@ -45,6 +45,10 @@ h6 {
 }
 
 p {
+    font-size: 14px;
+    color: $darkGrey;
+    line-height: 24px;
+    letter-spacing: 0.3px;
     margin: 0;
 }
 
@@ -64,4 +68,16 @@ section {
 a {
     text-decoration: none;
     color: $black;
+}
+
+.socialIconsList {
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    // gap: 10px;
+}
+
+li a {
+    color: $white;
+    padding: 20px;
 }

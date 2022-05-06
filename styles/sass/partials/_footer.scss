@@ -46,23 +46,13 @@ footer {
                 font-style: italic;
             }
 
-            .social-icons {
+            .socialIcons {
                 border-top: 0.5px solid $brownGrey;
                 margin-top: 15px;
                 width: 200px;
 
             }
 
-            .social-icons-list {
-                display: flex;
-                margin-top: 15px;
-                justify-content: center;
-            }
-
-            li a {
-                color: $white;
-                padding: 20px;
-            }
         }
 
         .footerTwo {
@@ -132,11 +122,6 @@ footer {
                     // width: 200px;
                     // NO ME AGARRA!!!!!!!!!!!!!!
                     text-align: left;
-                }
-
-
-                .social-icons-list {
-                    justify-content: flex-start;
                 }
             }
         }

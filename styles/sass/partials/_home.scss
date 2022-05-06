@@ -12,6 +12,10 @@ main.homeMain {
         padding: 30px;
     }
 
+    p {
+        text-align: center;
+    }
+
     section {
         padding: 0;
 
@@ -35,14 +39,7 @@ main.homeMain {
             }
         }
 
-        p {
-            text-align: center;
-            // margin: 15px;
-            line-height: 24px;
-            letter-spacing: 0.3px;
-        }
-
-        .bottomPopularRecipes {
+        .bottomContent {
             background-color: $lightGray;
 
             li {
@@ -59,7 +56,7 @@ main.homeMain {
                     margin-bottom: 10px;
                 }
 
-                p {
+                p.menuItem {
                     text-align: left;
                 }
             }
@@ -76,15 +73,16 @@ main.homeMain {
 
             .fancyStamp {
                 position: absolute;
-                height: 60%;
-                bottom: 90px;
-                left: 215px;
+                width: 35%;
+                bottom: 95px;
+                left: 180px;
             }
         }
 
         p.quote {
             font-size: 18px;
             font-style: italic;
+            text-align: center;
             line-height: 36px;
             letter-spacing: 0.6px;
 
@@ -118,7 +116,12 @@ main.homeMain {
                 display: flex;
             }
 
-            .topContent,
+            .topContent {
+                flex-basis: 50%;
+                margin: 150px auto;
+
+            }
+
             .topImage {
                 flex-basis: 50%;
             }
@@ -159,7 +162,5 @@ main.homeMain {
         }
     }
 
-    // p.quote {
-    //     text-align: center;
-    // }
+
 }

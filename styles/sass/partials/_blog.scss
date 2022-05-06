@@ -2,3 +2,147 @@
     background: url("../assets/blog-1.jpeg") center no-repeat;
     background-size: cover;
 }
+
+main.blogMain {
+    section {
+        padding: 30px;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 25px;
+        text-align: left;
+        margin-top: 25px;
+        margin-bottom: 10px;
+    }
+
+    h4 {
+        text-align: left;
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    h3 {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .borderBottom {
+        border-bottom: 1px solid $lightGray;
+        padding-top: 20px;
+    }
+
+    .tagsAndShare {
+        // border-top: 1px solid $lightGray;
+        // border-bottom: 1px solid $lightGray;
+        // padding-top: 20px;
+
+        .shareParagraph {
+            display: inline-block;
+        }
+
+        .socialIconsContainer {
+            display: inline-block;
+
+            li a {
+                color: $darkGrey;
+                padding: 20px;
+            }
+        }
+    }
+
+    .imageContainer {
+        margin-bottom: 20px;
+    }
+
+    .authorBio {
+        background-color: $lightGray;
+        padding: 1px 20px;
+    }
+
+    .postImage {
+        margin-bottom: 30px;
+    }
+
+    h3.mobileOnly {
+        font-size: 14px;
+    }
+
+    .commentContent {
+        width: 283px;
+        height: 300px;
+        background-color: $lightGray;
+        padding: 0 15px;
+        position: relative;
+        margin: 0 auto;
+
+        .arrow-top {
+            margin-top: 40px;
+        }
+
+        &:after {
+            content: " ";
+            position: absolute;
+            right: 30px;
+            top: -15px;
+            border-top: none;
+            border-right: 15px solid transparent;
+            border-left: 15px solid transparent;
+            border-bottom: 15px solid $lightGray;
+        }
+
+        .commentsName,
+        .titleCommentsName {
+            display: inline-block;
+        }
+
+        .commentsName {
+            text-transform: none;
+            font-size: 18px;
+            line-height: 36px;
+            letter-spacing: 0.5px;
+
+        }
+    }
+
+
+
+    .italicParagraph {
+        font-style: italic;
+    }
+
+    .commentForm {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        .commentItem1 {
+            flex: 1;
+        }
+
+        .commentItem2 {
+            flex-basis: 100%;
+        }
+
+        .commentItem1,
+        .commentItem2 {
+            font-family: $secondary;
+            padding: 10px;
+        }
+
+    }
+
+}
+
+
+@media (min-width: 800px) {
+    section {
+        padding: 50px;
+    }
+
+}

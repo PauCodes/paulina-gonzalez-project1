@@ -285,7 +285,7 @@ template {
 }
 
 section {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 img {
@@ -320,6 +320,10 @@ h6 {
 }
 
 p {
+  font-size: 14px;
+  color: #535353;
+  line-height: 24px;
+  letter-spacing: 0.3px;
   margin: 0;
 }
 
@@ -336,6 +340,21 @@ section {
 a {
   text-decoration: none;
   color: #2E2E2E;
+}
+
+.socialIconsList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+li a {
+  color: #F6F6F6;
+  padding: 20px;
 }
 
 header {
@@ -391,6 +410,9 @@ main.homeMain .ourRestaurants,
 main.homeMain .hungryClients {
   padding: 30px;
 }
+main.homeMain p {
+  text-align: center;
+}
 main.homeMain section {
   padding: 0;
 }
@@ -411,27 +433,22 @@ main.homeMain section h2::after {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
-main.homeMain section p {
-  text-align: center;
-  line-height: 24px;
-  letter-spacing: 0.3px;
-}
-main.homeMain section .bottomPopularRecipes {
+main.homeMain section .bottomContent {
   background-color: #f2f2f2;
 }
-main.homeMain section .bottomPopularRecipes li {
+main.homeMain section .bottomContent li {
   padding: 20px 55px;
   position: relative;
 }
-main.homeMain section .bottomPopularRecipes li i {
+main.homeMain section .bottomContent li i {
   position: absolute;
   font-size: 25px;
   left: 13px;
 }
-main.homeMain section .bottomPopularRecipes li h4 {
+main.homeMain section .bottomContent li h4 {
   margin-bottom: 10px;
 }
-main.homeMain section .bottomPopularRecipes li p {
+main.homeMain section .bottomContent li p.menuItem {
   text-align: left;
 }
 main.homeMain .ourRestaurants .restaurantImageContainer,
@@ -441,14 +458,15 @@ main.homeMain .hungryClients .restaurantImageContainer {
 main.homeMain .ourRestaurants .restaurantImageContainer .fancyStamp,
 main.homeMain .hungryClients .restaurantImageContainer .fancyStamp {
   position: absolute;
-  height: 60%;
-  bottom: 90px;
-  left: 215px;
+  width: 35%;
+  bottom: 95px;
+  left: 180px;
 }
 main.homeMain .ourRestaurants p.quote,
 main.homeMain .hungryClients p.quote {
   font-size: 18px;
   font-style: italic;
+  text-align: center;
   line-height: 36px;
   letter-spacing: 0.6px;
 }
@@ -478,8 +496,12 @@ main.homeMain .hungryClients {
     display: -ms-flexbox;
     display: flex;
   }
-  main.homeMain .popularRecipes .topContent,
-main.homeMain .popularRecipes .topImage {
+  main.homeMain .popularRecipes .topContent {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin: 150px auto;
+  }
+  main.homeMain .popularRecipes .topImage {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
   }
@@ -529,6 +551,118 @@ main.homeMain .popularRecipes .bottomPopularRecipes .bottomImage {
   background-size: cover;
 }
 
+main.blogMain section {
+  padding: 30px;
+  margin-bottom: 0;
+}
+main.blogMain h2 {
+  font-size: 25px;
+  text-align: left;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+main.blogMain h4 {
+  text-align: left;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+main.blogMain p {
+  text-align: left;
+  margin-bottom: 20px;
+}
+main.blogMain h3 {
+  font-size: 16px;
+  margin-top: 20px;
+}
+main.blogMain .borderBottom {
+  border-bottom: 1px solid #f2f2f2;
+  padding-top: 20px;
+}
+main.blogMain .tagsAndShare .shareParagraph {
+  display: inline-block;
+}
+main.blogMain .tagsAndShare .socialIconsContainer {
+  display: inline-block;
+}
+main.blogMain .tagsAndShare .socialIconsContainer li a {
+  color: #535353;
+  padding: 20px;
+}
+main.blogMain .imageContainer {
+  margin-bottom: 20px;
+}
+main.blogMain .authorBio {
+  background-color: #f2f2f2;
+  padding: 1px 20px;
+}
+main.blogMain .postImage {
+  margin-bottom: 30px;
+}
+main.blogMain h3.mobileOnly {
+  font-size: 14px;
+}
+main.blogMain .commentContent {
+  width: 283px;
+  height: 300px;
+  background-color: #f2f2f2;
+  padding: 0 15px;
+  position: relative;
+  margin: 0 auto;
+}
+main.blogMain .commentContent .arrow-top {
+  margin-top: 40px;
+}
+main.blogMain .commentContent:after {
+  content: " ";
+  position: absolute;
+  right: 30px;
+  top: -15px;
+  border-top: none;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid #f2f2f2;
+}
+main.blogMain .commentContent .commentsName,
+main.blogMain .commentContent .titleCommentsName {
+  display: inline-block;
+}
+main.blogMain .commentContent .commentsName {
+  text-transform: none;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.5px;
+}
+main.blogMain .italicParagraph {
+  font-style: italic;
+}
+main.blogMain .commentForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+main.blogMain .commentForm .commentItem1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+main.blogMain .commentForm .commentItem2 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+main.blogMain .commentForm .commentItem1,
+main.blogMain .commentForm .commentItem2 {
+  font-family: "Lora", serif;
+  padding: 10px;
+}
+
+@media (min-width: 800px) {
+  section {
+    padding: 50px;
+  }
+}
 footer {
   background-color: #333333;
 }
@@ -616,26 +750,11 @@ footer .footerContainer .footerThree input::placeholder {
   font-family: "Lora", serif;
   font-style: italic;
 }
-footer .footerContainer .footerOne .social-icons,
-footer .footerContainer .footerThree .social-icons {
+footer .footerContainer .footerOne .socialIcons,
+footer .footerContainer .footerThree .socialIcons {
   border-top: 0.5px solid #999999;
   margin-top: 15px;
   width: 200px;
-}
-footer .footerContainer .footerOne .social-icons-list,
-footer .footerContainer .footerThree .social-icons-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 15px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-footer .footerContainer .footerOne li a,
-footer .footerContainer .footerThree li a {
-  color: #F6F6F6;
-  padding: 20px;
 }
 footer .footerContainer .footerTwo {
   display: none;
@@ -710,13 +829,6 @@ footer .footerContainer .footerThree p {
     line-height: 44px;
     letter-spacing: 0.3px;
     text-align: left;
-  }
-  footer .footerContainer .footerOne .social-icons-list,
-footer .footerContainer .footerTwo .social-icons-list,
-footer .footerContainer .footerThree .social-icons-list {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
   }
   footer .copyright {
     max-width: 1080px;
