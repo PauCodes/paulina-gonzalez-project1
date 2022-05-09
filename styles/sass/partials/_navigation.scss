@@ -1,48 +1,61 @@
-header {
-    background: url("../assets/home-1.jpeg") center no-repeat;
+// header {
+//     background: url("../assets/home-1.jpeg") center no-repeat;
 
-    .navBar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-top: 20px;
+//     .navBar {
+//         // display: flex;
+//         // justify-content: space-between;
+//         // align-items: center;
+//         // padding-top: 20px;
 
-        h1 {
-            font-size: 46px;
-        }
+//         h1 {
+//             font-size: 46px;
+//         }
 
-        .burgerMenu {
-            font-size: 30px;
+//         .burgerMenu {
+//             font-size: 30px;
 
-        }
+//         }
 
-        .navigation {
-            display: none;
-        }
-    }
-}
+//         // .navigation {
+//         //     display: none;
+//         // }
+//     }
+// }
 
 
-// MEDIA QUERY
-@media (min-width: 800px) {
+// // MEDIA QUERY
+// @media (min-width: 800px) {
 
-    // HEADER
-    header {
-        .navBar .burgerMenu {
-            display: none;
-        }
+//     // HEADER
+//     header {
+//         .navBar .burgerMenu {
+//             display: none;
+//         }
 
-        .navBar .navigation {
-            display: flex;
-            gap: 20px;
+//         .navBar .navigation {
+//             display: flex;
+//             gap: 20px;
 
-            li a {
-                font-family: $primary;
-                text-transform: uppercase;
-                font-weight: bold;
-                font-size: 20px;
-            }
-        }
+//             li a {
+//                 font-family: $primary;
+//                 text-transform: uppercase;
+//                 font-weight: bold;
+//                 font-size: 20px;
+//                 color: $black;
+//                 padding: 0;
+//             }
+//         }
 
-    }
-}
+//         .navBar {
+//             display: flex;
+//             justify-content: space-between;
+//             align-items: center;
+//             padding-top: 20px;
+
+//             .navigation {
+//                 display: none;
+//             }
+//         }
+
+//     }
+// }

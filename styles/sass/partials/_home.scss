@@ -39,11 +39,16 @@ main.homeMain {
             }
         }
 
+        .greenButton {
+            margin: 40px auto;
+            display: block;
+        }
+
         .bottomContent {
             background-color: $lightGray;
 
             li {
-                padding: 20px 55px;
+                padding: 20px 50px;
                 position: relative;
 
                 i {
@@ -67,15 +72,16 @@ main.homeMain {
     .ourRestaurants,
     .hungryClients {
 
-        // NOT SURE ABOUT ALL THIS IMAGE PART
+
         .restaurantImageContainer {
             position: relative;
 
+
             .fancyStamp {
                 position: absolute;
-                width: 35%;
-                bottom: 95px;
-                left: 180px;
+                width: 95px;
+                top: -55px;
+                right: -35px;
             }
         }
 
@@ -114,12 +120,15 @@ main.homeMain {
 
             .topPopularRecipes {
                 display: flex;
+                width: 100%;
             }
 
             .topContent {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 flex-basis: 50%;
-                margin: 150px auto;
-
             }
 
             .topImage {
@@ -130,7 +139,11 @@ main.homeMain {
                 display: flex;
 
                 .bottomContent {
+                    display: flex;
+                    align-items: center;
+                    padding: 0 45px;
                     order: 2;
+
 
                     ul.menuList {
                         display: flex;
@@ -139,8 +152,8 @@ main.homeMain {
 
                         li {
                             padding: 0;
-                            margin: 60px 45px;
-                            width: calc((100% / 2) - 110px);
+                            margin: 17px 50px;
+                            width: calc((100% / 2) - 100px);
 
                             i {
                                 left: -45px;
@@ -156,11 +169,79 @@ main.homeMain {
             }
         }
 
+        .restaurantImageContainer {
+            width: 440px;
+            margin: 65px auto;
+        }
+
         .imagesGallery {
             display: flex;
             flex-wrap: wrap;
+
+            li.imageGallery {
+                flex-basis: calc(100% / 3);
+            }
         }
     }
-
-
 }
+
+
+// @media (max-width: 1378px) {
+//     main.homeMain {
+//         .popularRecipes {
+//             display: flex;
+//             flex-wrap: wrap;
+
+//             .topPopularRecipes {
+//                 display: flex;
+//                 width: 100%;
+//             }
+
+//             .topContent {
+//                 display: flex;
+//                 flex-direction: column;
+//                 align-items: center;
+//                 justify-content: center;
+//                 flex-basis: 50%;
+//             }
+
+//             .topImage {
+//                 flex-basis: 50%;
+//             }
+
+//             .bottomPopularRecipes {
+//                 display: flex;
+
+//                 .bottomContent {
+//                     display: flex;
+//                     align-items: center;
+//                     padding: 0 45px;
+//                     order: 2;
+//                     width: 50%;
+
+//                     ul.menuList {
+//                         display: flex;
+//                         flex-wrap: nowrap;
+//                         justify-content: center;
+//                         overflow-x: auto;
+//                         justify-content: start;
+
+//                         li {
+//                             flex-shrink: 0;
+//                             padding: 0;
+//                             margin: 17px 50px;
+//                             width: calc((100% / 2) - 100px);
+//                         }
+//                     }
+//                 }
+
+//                 .bottomImage {
+//                     // flex-shrink: 0;
+//                 }
+//             }
+//         }
+
+
+//     }
+
+// }

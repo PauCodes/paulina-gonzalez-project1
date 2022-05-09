@@ -7,6 +7,7 @@
 }
 
 section {
+    padding: 100px;
     margin-bottom: 30px;
 }
 
@@ -20,15 +21,104 @@ html {
 }
 
 header {
-    background-size: cover;
     min-height: 100vh;
-    // margin-bottom: 30px;
-}
+    width: 100%;
+    position: relative;
 
-.blogHeader {
-    background: url("../assets/blog-1.jpeg") center no-repeat;
-}
+    .navBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px;
 
+        h1 {
+            font-size: 46px;
+        }
+
+        .burgerMenu {
+            font-size: 30px;
+
+            @media (min-width: 800px) {
+                display: none;
+            }
+        }
+
+        input#toggle {
+            display: none;
+        }
+
+        ul.navigation {
+            display: block;
+            position: fixed;
+            width: 70%;
+            background-color: #000;
+            top: 0;
+            bottom: 0;
+            margin: 0;
+            padding: 0;
+            right: -70%;
+            z-index: 9;
+            transition: all 0.5s;
+            -webkit-transition: all 0.5s;
+
+            li a {
+                display: block !important;
+            }
+
+            li {
+                text-align: center;
+                padding: 20px;
+
+                a {
+                    font-family: $primary;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 20px;
+                    color: $white;
+                    padding: 0;
+                }
+            }
+
+            @media (min-width: 800px) {
+                display: flex;
+                position: unset;
+                background: transparent;
+                justify-content: end;
+
+                li {
+                    display: inherit;
+                    padding: 20px;
+
+                    a {
+                        color: black;
+                        padding: 0;
+                    }
+                }
+            }
+
+            .closeMenu {
+                color: white;
+                text-align: right;
+                padding-top: 15px;
+                padding-right: 50px;
+                cursor: pointer;
+
+                @media (min-width: 800px) {
+                    display: none;
+                }
+            }
+        }
+
+        /* When Menu button is checked, put navigation on the right */
+        input#toggle:checked~ul.navigation {
+            right: 0;
+        }
+
+        input#toggle {
+            display: none;
+        }
+    }
+}
 
 
 h1,
@@ -52,18 +142,12 @@ p {
     margin: 0;
 }
 
-
-
 ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-
-section {
-    padding: 100px;
-}
 
 a {
     text-decoration: none;
@@ -74,10 +158,41 @@ a {
     display: flex;
     margin-top: 15px;
     justify-content: center;
-    // gap: 10px;
+}
+
+.italicParagraph {
+    font-style: italic;
 }
 
 li a {
     color: $white;
     padding: 20px;
+}
+
+.greenButton {
+    background-color: $brightGreen;
+    border: none;
+    text-transform: uppercase;
+    color: $white;
+    padding: 20px 30px;
+    margin-top: 40px;
+}
+
+.emailInput {
+    position: relative
+}
+
+.arrowButton {
+    position: absolute;
+    right: 0;
+    background-color: #539908;
+    border: none;
+    top: 0;
+    bottom: 0;
+    padding: 10px;
+
+    a {
+        color: $white;
+    }
+
 }

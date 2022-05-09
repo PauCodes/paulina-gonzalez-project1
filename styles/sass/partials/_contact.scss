@@ -1,0 +1,121 @@
+.contactHeader {
+    background: url("../assets/contact-1.jpeg") center no-repeat;
+    background-size: cover;
+}
+
+main.contactMain {
+    section {
+        padding: 30px;
+        margin-bottom: 0;
+    }
+
+    h4 {
+        text-align: left;
+        margin-top: 60px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .messageForm {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        .messageItem1 {
+            flex: 1;
+        }
+
+        .messageItem2 {
+            flex-basis: 100%;
+        }
+
+        .messageItem1,
+        .messageItem2 {
+            background-color: $lightGray;
+            border: none;
+            font-family: $secondary;
+            padding: 10px;
+        }
+
+        .transparentButton {
+            text-transform: uppercase;
+            background-color: transparent;
+            border: none;
+            color: $brightGreen;
+            position: relative;
+            margin-bottom: 20px
+        }
+
+        i.fa-right-long {
+            position: absolute;
+            left: 140px;
+            color: $brightGreen;
+            font-weight: bold;
+        }
+    }
+
+    .contactDetails {
+        background-color: $lightGray;
+
+        h5 {
+            margin-top: 45px;
+            margin-bottom: 10px;
+        }
+
+        .monFriParagraph {
+            display: inline-block;
+            font-family: "Raleway", sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-bottom: 0;
+        }
+
+        .hours {
+            text-transform: none;
+            font-weight: normal;
+        }
+    }
+
+    .backgroundImage {
+        background: url("../assets/contact-2.jpeg") center no-repeat;
+        background-size: cover;
+        height: 630px;
+        width: 100%;
+
+    }
+
+}
+
+// MEDIA QUERY 
+
+@media (min-width: 800px) {
+    .messageContactContainer {
+        display: flex;
+
+        .messageUsForm {
+            flex: 2;
+
+            // i.fa-solid.fa-right-long {
+            //     top: 1234px;
+            //     left: 215px;
+            // }
+        }
+
+
+
+        .contactDetails {
+            flex: 1;
+        }
+    }
+
+
+
+
+
+
+
+}

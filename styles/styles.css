@@ -285,6 +285,7 @@ template {
 }
 
 section {
+  padding: 100px;
   margin-bottom: 30px;
 }
 
@@ -298,12 +299,103 @@ html {
 }
 
 header {
-  background-size: cover;
   min-height: 100vh;
+  width: 100%;
+  position: relative;
 }
-
-.blogHeader {
-  background: url("../assets/blog-1.jpeg") center no-repeat;
+header .navBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  /* When Menu button is checked, put navigation on the right */
+}
+header .navBar h1 {
+  font-size: 46px;
+}
+header .navBar .burgerMenu {
+  font-size: 30px;
+}
+@media (min-width: 800px) {
+  header .navBar .burgerMenu {
+    display: none;
+  }
+}
+header .navBar input#toggle {
+  display: none;
+}
+header .navBar ul.navigation {
+  display: block;
+  position: fixed;
+  width: 70%;
+  background-color: #000;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  right: -70%;
+  z-index: 9;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+header .navBar ul.navigation li a {
+  display: block !important;
+}
+header .navBar ul.navigation li {
+  text-align: center;
+  padding: 20px;
+}
+header .navBar ul.navigation li a {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  color: #F6F6F6;
+  padding: 0;
+}
+@media (min-width: 800px) {
+  header .navBar ul.navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: unset;
+    background: transparent;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  header .navBar ul.navigation li {
+    display: inherit;
+    padding: 20px;
+  }
+  header .navBar ul.navigation li a {
+    color: black;
+    padding: 0;
+  }
+}
+header .navBar ul.navigation .closeMenu {
+  color: white;
+  text-align: right;
+  padding-top: 15px;
+  padding-right: 50px;
+  cursor: pointer;
+}
+@media (min-width: 800px) {
+  header .navBar ul.navigation .closeMenu {
+    display: none;
+  }
+}
+header .navBar input#toggle:checked ~ ul.navigation {
+  right: 0;
+}
+header .navBar input#toggle {
+  display: none;
 }
 
 h1,
@@ -333,10 +425,6 @@ ul {
   list-style: none;
 }
 
-section {
-  padding: 100px;
-}
-
 a {
   text-decoration: none;
   color: #2E2E2E;
@@ -352,53 +440,41 @@ a {
           justify-content: center;
 }
 
+.italicParagraph {
+  font-style: italic;
+}
+
 li a {
   color: #F6F6F6;
   padding: 20px;
 }
 
-header {
-  background: url("../assets/home-1.jpeg") center no-repeat;
-}
-header .navBar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 20px;
-}
-header .navBar h1 {
-  font-size: 46px;
-}
-header .navBar .burgerMenu {
-  font-size: 30px;
-}
-header .navBar .navigation {
-  display: none;
+.greenButton {
+  background-color: #539908;
+  border: none;
+  text-transform: uppercase;
+  color: #F6F6F6;
+  padding: 20px 30px;
+  margin-top: 40px;
 }
 
-@media (min-width: 800px) {
-  header .navBar .burgerMenu {
-    display: none;
-  }
-  header .navBar .navigation {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 20px;
-  }
-  header .navBar .navigation li a {
-    font-family: "Raleway", sans-serif;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 20px;
-  }
+.emailInput {
+  position: relative;
 }
+
+.arrowButton {
+  position: absolute;
+  right: 0;
+  background-color: #539908;
+  border: none;
+  top: 0;
+  bottom: 0;
+  padding: 10px;
+}
+.arrowButton a {
+  color: #F6F6F6;
+}
+
 .homeHeader {
   background: url("../assets/home-1.jpeg") center no-repeat;
   background-size: cover;
@@ -433,11 +509,15 @@ main.homeMain section h2::after {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
+main.homeMain section .greenButton {
+  margin: 40px auto;
+  display: block;
+}
 main.homeMain section .bottomContent {
   background-color: #f2f2f2;
 }
 main.homeMain section .bottomContent li {
-  padding: 20px 55px;
+  padding: 20px 50px;
   position: relative;
 }
 main.homeMain section .bottomContent li i {
@@ -458,9 +538,9 @@ main.homeMain .hungryClients .restaurantImageContainer {
 main.homeMain .ourRestaurants .restaurantImageContainer .fancyStamp,
 main.homeMain .hungryClients .restaurantImageContainer .fancyStamp {
   position: absolute;
-  width: 35%;
-  bottom: 95px;
-  left: 180px;
+  width: 95px;
+  top: -55px;
+  right: -35px;
 }
 main.homeMain .ourRestaurants p.quote,
 main.homeMain .hungryClients p.quote {
@@ -495,11 +575,24 @@ main.homeMain .hungryClients {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    width: 100%;
   }
   main.homeMain .popularRecipes .topContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
-    margin: 150px auto;
   }
   main.homeMain .popularRecipes .topImage {
     -ms-flex-preferred-size: 50%;
@@ -511,6 +604,13 @@ main.homeMain .hungryClients {
     display: flex;
   }
   main.homeMain .popularRecipes .bottomPopularRecipes .bottomContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 45px;
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
@@ -527,8 +627,8 @@ main.homeMain .hungryClients {
   }
   main.homeMain .popularRecipes .bottomPopularRecipes .bottomContent ul.menuList li {
     padding: 0;
-    margin: 60px 45px;
-    width: calc(50% - 110px);
+    margin: 17px 50px;
+    width: calc(50% - 100px);
   }
   main.homeMain .popularRecipes .bottomPopularRecipes .bottomContent ul.menuList li i {
     left: -45px;
@@ -538,6 +638,10 @@ main.homeMain .popularRecipes .bottomPopularRecipes .bottomImage {
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
   }
+  main.homeMain .restaurantImageContainer {
+    width: 440px;
+    margin: 65px auto;
+  }
   main.homeMain .imagesGallery {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -545,20 +649,24 @@ main.homeMain .popularRecipes .bottomPopularRecipes .bottomImage {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+  main.homeMain .imagesGallery li.imageGallery {
+    -ms-flex-preferred-size: 33.3333333333%;
+        flex-basis: 33.3333333333%;
+  }
 }
 .blogHeader {
   background: url("../assets/blog-1.jpeg") center no-repeat;
   background-size: cover;
 }
 
-main.blogMain section {
+main.blogMain .blogSection {
   padding: 30px;
   margin-bottom: 0;
 }
 main.blogMain h2 {
   font-size: 25px;
   text-align: left;
-  margin-top: 25px;
+  margin-top: 90px;
   margin-bottom: 10px;
 }
 main.blogMain h4 {
@@ -578,6 +686,16 @@ main.blogMain .borderBottom {
   border-bottom: 1px solid #f2f2f2;
   padding-top: 20px;
 }
+main.blogMain .postInfo {
+  font-family: "Raleway", sans-serif;
+}
+main.blogMain .boldTitle {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+main.blogMain .lineBreakDesktop {
+  display: none;
+}
 main.blogMain .tagsAndShare .shareParagraph {
   display: inline-block;
 }
@@ -589,7 +707,7 @@ main.blogMain .tagsAndShare .socialIconsContainer li a {
   padding: 20px;
 }
 main.blogMain .imageContainer {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 }
 main.blogMain .authorBio {
   background-color: #f2f2f2;
@@ -607,12 +725,11 @@ main.blogMain .commentContent {
   background-color: #f2f2f2;
   padding: 0 15px;
   position: relative;
-  margin: 0 auto;
 }
-main.blogMain .commentContent .arrow-top {
+main.blogMain .commentContent.arrowBox {
   margin-top: 40px;
 }
-main.blogMain .commentContent:after {
+main.blogMain .commentContent.arrowBox:after {
   content: " ";
   position: absolute;
   right: 30px;
@@ -622,18 +739,19 @@ main.blogMain .commentContent:after {
   border-left: 15px solid transparent;
   border-bottom: 15px solid #f2f2f2;
 }
+main.blogMain .commentContent.commentContentTop {
+  margin-bottom: 50px;
+}
 main.blogMain .commentContent .commentsName,
 main.blogMain .commentContent .titleCommentsName {
   display: inline-block;
+  margin-bottom: 0;
 }
 main.blogMain .commentContent .commentsName {
   text-transform: none;
   font-size: 18px;
   line-height: 36px;
   letter-spacing: 0.5px;
-}
-main.blogMain .italicParagraph {
-  font-style: italic;
 }
 main.blogMain .commentForm {
   display: -webkit-box;
@@ -657,10 +775,179 @@ main.blogMain .commentForm .commentItem2 {
   font-family: "Lora", serif;
   padding: 10px;
 }
+main.blogMain .commentForm .greenButton {
+  margin-top: 0;
+  margin-bottom: 100px;
+}
+
+.blogOnly {
+  display: none;
+}
 
 @media (min-width: 800px) {
-  section {
+  main.blogMain section {
     padding: 50px;
+  }
+  main.blogMain .lineBreakDesktop {
+    display: block;
+  }
+  main.blogMain .featuredAuthor {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 40px;
+    padding-bottom: 35px;
+  }
+  main.blogMain .featuredAuthor .imageContainer {
+    margin-bottom: 0;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+  }
+  main.blogMain .featuredAuthor .authorBio {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    padding: 40px 46px;
+  }
+  main.blogMain .relatedPostContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+  }
+  main.blogMain .relatedPostContainer .postImageItem {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  main.blogMain .firstComment,
+main.blogMain .secondComment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 34px;
+  }
+  main.blogMain .firstComment .imageCommentContainer,
+main.blogMain .secondComment .imageCommentContainer {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  main.blogMain .firstComment .commentContent,
+main.blogMain .secondComment .commentContent {
+    width: 100%;
+    height: 100%;
+  }
+  main.blogMain .firstComment .commentContent.arrowBox,
+main.blogMain .secondComment .commentContent.arrowBox {
+    margin-top: 0;
+  }
+  main.blogMain .firstComment .commentContent.arrowBox:after,
+main.blogMain .secondComment .commentContent.arrowBox:after {
+    content: " ";
+    position: absolute;
+    right: 976px;
+    top: 15px;
+    border-top: 15px solid transparent;
+    border-right: 15px solid #f2f2f2;
+    border-left: none;
+    border-bottom: 15px solid transparent;
+  }
+}
+.contactHeader {
+  background: url("../assets/contact-1.jpeg") center no-repeat;
+  background-size: cover;
+}
+
+main.contactMain section {
+  padding: 30px;
+  margin-bottom: 0;
+}
+main.contactMain h4 {
+  text-align: left;
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+main.contactMain p {
+  text-align: left;
+  margin-bottom: 20px;
+}
+main.contactMain .messageForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
+}
+main.contactMain .messageForm .messageItem1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+main.contactMain .messageForm .messageItem2 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+main.contactMain .messageForm .messageItem1,
+main.contactMain .messageForm .messageItem2 {
+  background-color: #f2f2f2;
+  border: none;
+  font-family: "Lora", serif;
+  padding: 10px;
+}
+main.contactMain .messageForm .transparentButton {
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+  color: #539908;
+  position: relative;
+  margin-bottom: 20px;
+}
+main.contactMain .messageForm i.fa-right-long {
+  position: absolute;
+  left: 140px;
+  color: #539908;
+  font-weight: bold;
+}
+main.contactMain .contactDetails {
+  background-color: #f2f2f2;
+}
+main.contactMain .contactDetails h5 {
+  margin-top: 45px;
+  margin-bottom: 10px;
+}
+main.contactMain .contactDetails .monFriParagraph {
+  display: inline-block;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+main.contactMain .contactDetails .hours {
+  text-transform: none;
+  font-weight: normal;
+}
+main.contactMain .backgroundImage {
+  background: url("../assets/contact-2.jpeg") center no-repeat;
+  background-size: cover;
+  height: 630px;
+  width: 100%;
+}
+
+@media (min-width: 800px) {
+  .messageContactContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .messageContactContainer .messageUsForm {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+  .messageContactContainer .contactDetails {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 footer {
@@ -677,6 +964,7 @@ footer .footerContainer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 20px;
 }
 footer .footerContainer .footerOne,
 footer .footerContainer .footerThree {
@@ -696,7 +984,6 @@ footer .footerContainer .footerOne h5,
 footer .footerContainer .footerThree h4,
 footer .footerContainer .footerThree h5 {
   letter-spacing: 0.5px;
-  margin-top: 10px;
 }
 footer .footerContainer .footerOne h4,
 footer .footerContainer .footerThree h4 {
@@ -707,45 +994,37 @@ footer .footerContainer .footerThree h4 {
 footer .footerContainer .footerOne h5,
 footer .footerContainer .footerThree h5 {
   color: #F6F6F6;
-}
-footer .footerContainer .footerOne .desktopOnly,
-footer .footerContainer .footerThree .desktopOnly {
-  display: none;
+  margin-top: 20px;
 }
 footer .footerContainer .footerOne input,
 footer .footerContainer .footerThree input {
+  background-color: #535353;
   border: none;
   padding: 10px;
   width: 200px;
-  margin-top: 15px;
 }
 footer .footerContainer .footerOne input::-webkit-input-placeholder, footer .footerContainer .footerThree input::-webkit-input-placeholder {
-  background-color: #535353;
   color: #F6F6F6;
   font-family: "Lora", serif;
   font-style: italic;
 }
 footer .footerContainer .footerOne input::-moz-placeholder, footer .footerContainer .footerThree input::-moz-placeholder {
-  background-color: #535353;
   color: #F6F6F6;
   font-family: "Lora", serif;
   font-style: italic;
 }
 footer .footerContainer .footerOne input:-ms-input-placeholder, footer .footerContainer .footerThree input:-ms-input-placeholder {
-  background-color: #535353;
   color: #F6F6F6;
   font-family: "Lora", serif;
   font-style: italic;
 }
 footer .footerContainer .footerOne input::-ms-input-placeholder, footer .footerContainer .footerThree input::-ms-input-placeholder {
-  background-color: #535353;
   color: #F6F6F6;
   font-family: "Lora", serif;
   font-style: italic;
 }
 footer .footerContainer .footerOne input::placeholder,
 footer .footerContainer .footerThree input::placeholder {
-  background-color: #535353;
   color: #F6F6F6;
   font-family: "Lora", serif;
   font-style: italic;
@@ -817,7 +1096,7 @@ footer .footerContainer .footerThree .desktopOnly {
 footer .footerContainer .footerTwo h5,
 footer .footerContainer .footerThree h5 {
     letter-spacing: 0.5px;
-    margin-top: 10px;
+    margin-top: 30px;
     color: #F6F6F6;
   }
   footer .footerContainer .footerOne p,

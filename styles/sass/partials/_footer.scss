@@ -5,6 +5,7 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 20px;
 
         .footerOne,
         .footerThree {
@@ -15,7 +16,6 @@ footer {
             h4,
             h5 {
                 letter-spacing: 0.5px;
-                margin-top: 10px;
             }
 
             h4 {
@@ -26,21 +26,21 @@ footer {
 
             h5 {
                 color: $white;
+                margin-top: 20px;
             }
 
-            .desktopOnly {
-                display: none;
-            }
+            // .desktopOnly {
+            //     display: none;
+            // }
 
             input {
+                background-color: $darkGrey;
                 border: none;
                 padding: 10px;
                 width: 200px;
-                margin-top: 15px;
             }
 
             input::placeholder {
-                background-color: $darkGrey;
                 color: $white;
                 font-family: $secondary;
                 font-style: italic;
@@ -106,7 +106,7 @@ footer {
 
                 h5 {
                     letter-spacing: 0.5px;
-                    margin-top: 10px;
+                    margin-top: 30px;
                     color: $white;
                 }
 
