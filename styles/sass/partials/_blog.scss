@@ -67,14 +67,23 @@ main.blogMain {
         }
     }
 
-    .imageContainer {
-        margin-bottom: 35px;
+    .featuredAuthor {
+        display: flex;
+        flex-direction: column;
+
+        .imageContainer {
+            flex-shrink: 0;
+            margin-bottom: 35px;
+        }
+
+        .authorBio {
+            width: 100%;
+            height: 100%;
+            background-color: $lightGray;
+            padding: 1px 20px;
+        }
     }
 
-    .authorBio {
-        background-color: $lightGray;
-        padding: 1px 20px;
-    }
 
     .postImage {
         margin-bottom: 30px;
@@ -84,45 +93,57 @@ main.blogMain {
         font-size: 14px;
     }
 
-    .commentContent {
-        width: 283px;
-        height: 300px;
-        background-color: $lightGray;
-        padding: 0 15px;
-        position: relative;
+    .firstComment,
+    .secondComment {
+        display: flex;
+        flex-direction: column;
 
-        &.arrowBox {
-            margin-top: 40px;
+        .imageCommentContainer {
+            flex-shrink: 0;
+        }
 
-            &:after {
-                content: " ";
-                position: absolute;
-                right: 30px;
-                top: -15px;
-                border-top: none;
-                border-right: 15px solid transparent;
-                border-left: 15px solid transparent;
-                border-bottom: 15px solid $lightGray;
+        .commentContent {
+            width: 100%;
+            height: 100%;
+            background-color: $lightGray;
+            padding: 0 15px;
+            position: relative;
+
+            &.arrowBox {
+                margin-top: 40px;
+
+                &:after {
+                    content: " ";
+                    position: absolute;
+                    right: 30px;
+                    top: -15px;
+                    border-top: none;
+                    border-right: 15px solid transparent;
+                    border-left: 15px solid transparent;
+                    border-bottom: 15px solid $lightGray;
+                }
+            }
+
+            &.commentContentTop {
+                margin-bottom: 50px;
+            }
+
+            .commentsName,
+            .titleCommentsName {
+                display: inline-block;
+                margin-bottom: 0;
+            }
+
+            .commentsName {
+                text-transform: none;
+                font-size: 18px;
+                line-height: 36px;
+                letter-spacing: 0.5px;
             }
         }
-
-        &.commentContentTop {
-            margin-bottom: 50px;
-        }
-
-        .commentsName,
-        .titleCommentsName {
-            display: inline-block;
-            margin-bottom: 0;
-        }
-
-        .commentsName {
-            text-transform: none;
-            font-size: 18px;
-            line-height: 36px;
-            letter-spacing: 0.5px;
-        }
     }
+
+
 
     .commentForm {
         display: flex;
@@ -168,18 +189,18 @@ main.blogMain {
         }
 
         .featuredAuthor {
-            display: flex;
+            flex-direction: row;
             gap: 40px;
             padding-bottom: 35px;
 
             .imageContainer {
                 margin-bottom: 0;
-                flex-basis: 20%;
+                // flex-basis: 20%;
             }
 
             .authorBio {
-                flex-basis: 80%;
-                padding: 40px 46px;
+                // flex-basis: 80%;
+                padding: 18px 46px;
             }
         }
 
@@ -194,16 +215,17 @@ main.blogMain {
 
         .firstComment,
         .secondComment {
-            display: flex;
+            // display: flex;
+            flex-direction: row;
             gap: 34px;
 
-            .imageCommentContainer {
-                flex-shrink: 0;
-            }
+            // .imageCommentContainer {
+            //     flex-shrink: 0;
+            // }
 
             .commentContent {
-                width: 100%;
-                height: 100%;
+                // width: 100%;
+                // height: 100%;
 
                 &.arrowBox {
                     margin-top: 0;

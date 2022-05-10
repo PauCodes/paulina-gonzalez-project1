@@ -17,7 +17,8 @@ img {
 }
 
 html {
-    color: $black;
+    color: $blackTwo;
+    font-size: 125%;
 }
 
 header {
@@ -31,6 +32,12 @@ header {
         align-items: center;
         padding: 30px;
 
+        @media (min-width: 1100px) and (max-width: 1280px) {
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+
         h1 {
             font-size: 46px;
         }
@@ -38,7 +45,7 @@ header {
         .burgerMenu {
             font-size: 30px;
 
-            @media (min-width: 800px) {
+            @media (min-width: 1100px) {
                 display: none;
             }
         }
@@ -47,6 +54,7 @@ header {
             display: none;
         }
 
+        //SLIDE MENU
         ul.navigation {
             display: block;
             position: fixed;
@@ -60,6 +68,14 @@ header {
             z-index: 9;
             transition: all 0.5s;
             -webkit-transition: all 0.5s;
+
+
+
+            @media (min-width: 1100px) and (max-width: 1280px) {
+                width: 100%;
+            }
+
+
 
             li a {
                 display: block !important;
@@ -77,13 +93,42 @@ header {
                     color: $white;
                     padding: 0;
                 }
+
             }
 
-            @media (min-width: 800px) {
+            li.shoppingBag {
+                position: relative;
+                width: fit-content;
+                padding: 0;
+                margin: 20px auto;
+
+                .greenCircle {
+                    height: 20px;
+                    width: 20px;
+                    background-color: $brightGreen;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    top: 15px;
+                    left: 5px;
+
+                    .numberOnTop {
+                        font-family: $primary;
+                        color: $white;
+                    }
+                }
+            }
+
+
+            @media (min-width: 1100px) {
                 display: flex;
                 position: unset;
                 background: transparent;
-                justify-content: end;
+                justify-content: center;
+
+
 
                 li {
                     display: inherit;
@@ -93,7 +138,16 @@ header {
                         color: black;
                         padding: 0;
                     }
+
                 }
+
+                li.shoppingBag {
+                    margin: 20px;
+                }
+            }
+
+            @media (min-width: 1280px) {
+                justify-content: end;
             }
 
             .closeMenu {
@@ -103,7 +157,7 @@ header {
                 padding-right: 50px;
                 cursor: pointer;
 
-                @media (min-width: 800px) {
+                @media (min-width: 1100px) {
                     display: none;
                 }
             }
@@ -117,6 +171,13 @@ header {
         input#toggle {
             display: none;
         }
+
+        //ELIMINAR NAVIGATION???
+        // @media (min-width: 900px) and (max-width: 1378px) {
+        //     ul.navigation {
+        //         display: none;
+        //     }
+        // }
     }
 }
 
@@ -136,7 +197,6 @@ h6 {
 
 p {
     font-size: 14px;
-    color: $darkGrey;
     line-height: 24px;
     letter-spacing: 0.3px;
     margin: 0;
@@ -157,7 +217,7 @@ a {
 .socialIconsList {
     display: flex;
     margin-top: 15px;
-    justify-content: center;
+    justify-content: left;
 }
 
 .italicParagraph {
@@ -174,12 +234,14 @@ li a {
     border: none;
     text-transform: uppercase;
     color: $white;
-    padding: 20px 30px;
+    padding: 17px 30px;
     margin-top: 40px;
+    cursor: pointer;
 }
 
 .emailInput {
-    position: relative
+    position: relative;
+    margin-top: 20px;
 }
 
 .arrowButton {

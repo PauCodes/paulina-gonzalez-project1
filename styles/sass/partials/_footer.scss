@@ -29,15 +29,12 @@ footer {
                 margin-top: 20px;
             }
 
-            // .desktopOnly {
-            //     display: none;
-            // }
 
             input {
                 background-color: $darkGrey;
                 border: none;
                 padding: 10px;
-                width: 200px;
+                width: 230px;
             }
 
             input::placeholder {
@@ -48,11 +45,9 @@ footer {
 
             .socialIcons {
                 border-top: 0.5px solid $brownGrey;
-                margin-top: 15px;
-                width: 200px;
-
+                margin-top: 30px;
+                width: 230px;
             }
-
         }
 
         .footerTwo {

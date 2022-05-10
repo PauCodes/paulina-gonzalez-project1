@@ -47,12 +47,13 @@ main.contactMain {
             border: none;
             color: $brightGreen;
             position: relative;
-            margin-bottom: 20px
+            margin-bottom: 20px;
+            cursor: pointer;
         }
 
         i.fa-right-long {
             position: absolute;
-            left: 140px;
+            left: 170px;
             color: $brightGreen;
             font-weight: bold;
         }
@@ -98,11 +99,6 @@ main.contactMain {
 
         .messageUsForm {
             flex: 2;
-
-            // i.fa-solid.fa-right-long {
-            //     top: 1234px;
-            //     left: 215px;
-            // }
         }
 
 
