@@ -135,27 +135,38 @@
         </section>
 
         <section class="gallery">
-            <ul class="imagesGallery">
-                <li class="imageGallery">
-                    <img src="./assets/home-5.jpeg" alt="">
-                </li>
-                <li class="imageGallery">
-                    <img src="./assets/home-6.jpeg" alt="">
-                </li>
-                <li class="imageGallery">
-                    <img src="./assets/home-7.jpeg" alt="">
-                </li>
-                <li class="imageGallery">
-                    <img src="./assets/home-8.jpeg" alt="">
-                </li>
-                <li class="imageGallery">
-                    <img src="./assets/home-9.jpeg" alt="">
-                </li>
-                <li class="imageGallery">
-                    <img src="./assets/home-10.jpeg" alt="">
-                </li>
-            </ul>
+            <!-- JUST ADDED -->
+            <div class="wrapper carousel">
+                <ul class="imagesGallery" id="imgs">
+                    <!-- ADD ALT TO IMGS -->
+                    <li class="imageGallery">
+                        <img src="./assets/home-5.jpeg" alt="">
+                    </li>
+                    <li class="imageGallery">
+                        <img src="./assets/home-6.jpeg" alt="">
+                    </li>
+                    <li class="imageGallery">
+                        <img src="./assets/home-7.jpeg" alt="">
+                    </li>
+                    <li class="imageGallery">
+                        <img src="./assets/home-8.jpeg" alt="">
+                    </li>
+                    <li class="imageGallery">
+                        <img src="./assets/home-9.jpeg" alt="">
+                    </li>
+                    <li class="imageGallery">
+                        <img src="./assets/home-10.jpeg" alt="">
+                    </li>
+                </ul>
+                <!-- JUST ADDED -->
+                <div class="buttonsContainer">
+                    <button id="left" class="btn">Prev</button>
+                    <button id="right" class="btn">Next</button>
+                </div>
+            </div>
+
         </section>
+
         <section class="hungryClients">
             <div class="wrapper">
                 <h2>hungry clients</h2>
@@ -229,6 +240,7 @@
         </div>
     </footer>
     <script src="./js/nav.js"></script>
+    <script src="./js/carousel-home.js"></script>
 
 </body>
 

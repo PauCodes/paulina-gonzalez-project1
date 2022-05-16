@@ -42,10 +42,11 @@
                         <p class="numberOnTop">2</p>
                     </div>
                 </li>
-                <li>
-                    <a href="#">
+                <li class="search">
+                    <input type="text" class="searchInput" placeholder="search">
+                    <button class="searchButton">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                    </a>
+                    </button>
                 </li>
 
 
@@ -181,18 +182,18 @@
                 <p class="italicParagraph">Your email address will not be published. Required fields are marked*</p>
                 <form action="#" method="post" class="commentForm" name="commentForm">
                     <label for="name" class="sr-only">Name</label>
-                    <input class="commentItem1" type="text" id="name" placeholder="Name *" required>
+                    <input class="commentItem commentItem1" type="text" id="name" placeholder="Name *" required>
 
                     <label for="email" class="sr-only">Email</label>
-                    <input class="commentItem1" type="email" id="email" placeholder="Email *" required>
+                    <input class="commentItem commentItem1" type="email" id="email" placeholder="Email *" required>
 
                     <label for="WEB" class="sr-only">Your Website</label>
                     <input class="commentItem1" type="text" id="website" placeholder="Your Website">
 
                     <label for="comment" class="sr-only">Comment</label>
-                    <textarea class="commentItem2" name="comment" id="comment" cols="30" rows="10"
-                        placeholder="Comment"></textarea>
-                    <button class="greenButton">submit comment</button>
+                    <textarea class="commentItem commentItem2" name="comment" id="comment" cols="30" rows="10"
+                        placeholder="Comment *" required></textarea>
+                    <button id="submitComment" class="greenButton">submit comment</button>
                 </form>
             </div>
         </div>
@@ -256,6 +257,8 @@
     </footer>
 
     <script src="./js/nav.js"></script>
+    <script src="./js/comment-blog.js"></script>
+    <script src="./js/search-button.js"></script>
 
 </body>
 

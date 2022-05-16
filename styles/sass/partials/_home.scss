@@ -69,6 +69,70 @@ main.homeMain {
         }
     }
 
+    //CAROUSEL
+    .gallery {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 65vh;
+        margin: 0;
+
+        .carousel {
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            height: 530px;
+            width: 500px;
+            overflow: hidden;
+
+            .imagesGallery {
+                display: flex;
+                /* I will manage this in JS - it's going to be at 500px to change to the next img */
+                transform: translateX(0);
+                transition: transform 0.5s ease-in-out;
+
+                img {
+                    width: 500px;
+                    height: 500px;
+                    object-fit: cover;
+                }
+            }
+
+            .buttonsContainer {
+                display: flex;
+                justify-content: space-between;
+
+                .btn {
+                    background-color: $brightGreen;
+                    color: $white;
+                    border: none;
+                    //FIX THIS
+                    padding: 0.5rem;
+                    cursor: pointer;
+                    width: 49.5%;
+                }
+
+                //FIX!!!
+                &:hover {
+                    opacity: 0.9;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    // .gallery,
+    .hungryClients {
+        margin-bottom: 0;
+    }
+
+    .hungryClients {
+        background-color: $lightGreen;
+    }
+
+
+
     .ourRestaurants,
     .hungryClients {
 
@@ -100,14 +164,7 @@ main.homeMain {
 
     }
 
-    .gallery,
-    .hungryClients {
-        margin-bottom: 0;
-    }
 
-    .hungryClients {
-        background-color: $lightGreen;
-    }
 }
 
 // MEDIA QUERY
@@ -179,14 +236,14 @@ main.homeMain {
             margin: 65px auto;
         }
 
-        .imagesGallery {
-            display: flex;
-            flex-wrap: wrap;
+        // .imagesGallery {
+        //     display: flex;
+        //     flex-wrap: wrap;
 
-            li.imageGallery {
-                flex-basis: calc(100% / 3);
-            }
-        }
+        //     li.imageGallery {
+        //         flex-basis: calc(100% / 3);
+        //     }
+        // }
     }
 }
 

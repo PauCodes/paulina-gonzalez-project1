@@ -357,6 +357,67 @@ header .navBar ul.navigation {
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
 }
+header .navBar ul.navigation .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  height: 50px;
+  padding: 0;
+  margin: 45px;
+}
+header .navBar ul.navigation .search .searchInput {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  color: transparent;
+  border: 0;
+  font-size: 18px;
+  padding: 18px;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+  margin: 0;
+  position: absolute;
+}
+header .navBar ul.navigation .search .searchButton {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  color: #F6F6F6;
+}
+header .navBar ul.navigation .search .searchInput:focus,
+header .navBar ul.navigation .search .searchButton:focus {
+  outline: none;
+}
+header .navBar ul.navigation .active .searchInput {
+  width: 100px;
+  background-color: #2E2E2E;
+  color: #F6F6F6;
+}
+header .navBar ul.navigation .active .searchButton {
+  -webkit-transform: translateX(75px);
+          transform: translateX(75px);
+}
 @media (min-width: 1100px) and (max-width: 1280px) {
   header .navBar ul.navigation {
     width: 100%;
@@ -406,6 +467,14 @@ header .navBar ul.navigation li.shoppingBag .greenCircle {
 header .navBar ul.navigation li.shoppingBag .greenCircle .numberOnTop {
   font-family: "Raleway", sans-serif;
   color: #F6F6F6;
+}
+header .navBar ul.navigation .search {
+  margin: 0;
+  min-width: 80px;
+}
+header .navBar ul.navigation .search .searchButton {
+  color: #2E2E2E;
+  top: 7px;
 }
 @media (min-width: 1100px) {
   header .navBar ul.navigation {
@@ -590,6 +659,72 @@ main.homeMain section .bottomContent li h4 {
 main.homeMain section .bottomContent li p.menuItem {
   text-align: left;
 }
+main.homeMain .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 65vh;
+  margin: 0;
+}
+main.homeMain .gallery .carousel {
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  height: 530px;
+  width: 500px;
+  overflow: hidden;
+}
+main.homeMain .gallery .carousel .imagesGallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* I will manage this in JS - it's going to be at 500px to change to the next img */
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+main.homeMain .gallery .carousel .imagesGallery img {
+  width: 500px;
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main.homeMain .gallery .carousel .buttonsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main.homeMain .gallery .carousel .buttonsContainer .btn {
+  background-color: #539908;
+  color: #F6F6F6;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  width: 49.5%;
+}
+main.homeMain .gallery .carousel .buttonsContainer:hover {
+  opacity: 0.9;
+}
+main.homeMain .gallery .carousel .buttonsContainer:focus {
+  outline: none;
+}
+main.homeMain .hungryClients {
+  margin-bottom: 0;
+}
+main.homeMain .hungryClients {
+  background-color: #DDED9A;
+}
 main.homeMain .ourRestaurants .restaurantImageContainer,
 main.homeMain .hungryClients .restaurantImageContainer {
   position: relative;
@@ -613,13 +748,6 @@ main.homeMain .ourRestaurants p.quote i,
 main.homeMain .hungryClients p.quote i {
   font-size: 25px;
   color: white;
-}
-main.homeMain .gallery,
-main.homeMain .hungryClients {
-  margin-bottom: 0;
-}
-main.homeMain .hungryClients {
-  background-color: #DDED9A;
 }
 
 @media (min-width: 900px) {
@@ -705,17 +833,6 @@ main.homeMain .popularRecipes .bottomPopularRecipes .bottomImage {
   main.homeMain .restaurantImageContainer {
     width: 440px;
     margin: 65px auto;
-  }
-  main.homeMain .imagesGallery {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  main.homeMain .imagesGallery li.imageGallery {
-    -ms-flex-preferred-size: 33.3333333333%;
-        flex-basis: 33.3333333333%;
   }
 }
 @media (min-width: 900px) and (max-width: 1378px) {
