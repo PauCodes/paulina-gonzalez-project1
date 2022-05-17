@@ -26,8 +26,7 @@
             commentButton.textContent = 'Thank you!';
 
             
-            // commentButton.style.backgroundColor = 'white';
-            // commentButton.style.color = 'green'
+            commentButton.style.backgroundColor = 'deeppink';
 
             //CLEAR THE INPUT
             inputElement.value = '';

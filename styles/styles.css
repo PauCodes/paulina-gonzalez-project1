@@ -403,6 +403,8 @@ header .navBar ul.navigation .search .searchButton {
   transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
   transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+header .navBar ul.navigation .search .searchButton .fa-magnifying-glass {
   color: #F6F6F6;
 }
 header .navBar ul.navigation .search .searchInput:focus,
@@ -473,7 +475,6 @@ header .navBar ul.navigation .search {
   min-width: 80px;
 }
 header .navBar ul.navigation .search .searchButton {
-  color: #2E2E2E;
   top: 7px;
 }
 @media (min-width: 1100px) {
@@ -495,6 +496,9 @@ header .navBar ul.navigation .search .searchButton {
     color: black;
     padding: 0;
   }
+  header .navBar ul.navigation .search .searchButton .fa-magnifying-glass {
+    color: #2E2E2E;
+  }
   header .navBar ul.navigation li.shoppingBag {
     margin: 20px;
   }
@@ -504,6 +508,9 @@ header .navBar ul.navigation .search .searchButton {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
+  }
+  header .navBar ul.navigation .search .searchButton .fa-magnifying-glass {
+    color: #2E2E2E;
   }
 }
 header .navBar ul.navigation .closeMenu {

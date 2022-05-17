@@ -9,8 +9,7 @@ button.addEventListener('click', () => {
     //toggle() is a method to switch between classes
     search.classList.toggle('active');
     
-    // input.style.backgroundColor = 'white';
-    // input.style.color = 'black';
+    
 
    
     
